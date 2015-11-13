@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>仿百度搜索图片说明移入效果</title>
+<style type="text/css">
+.container{ width:1280px; margin:0 auto;}
+.descBox{}
+.descBox ul{ margin:0; padding:0; list-style-type:none;}
+.descBox ul li{ width:200px; height:200px; overflow:hidden; position:relative; margin:0; padding:0; list-style-type:none; float:left; margin-bottom:15px; margin-right:15px;}
+.descBox .tip{  position:absolute; left:-200px; top:0; width:100%; height:100%; line-height:200px; text-align:center; background:rgba(0,0,0,.5); color:#fff; font-size:25px;}
+.descBox img{ width:100%; height:100%; display:block;}
+.descBox .tip img{
+  filter:alpha(opacity=50);       /* IE */
+  -moz-opacity:0.5;              /* 老版Mozilla */
+  -khtml-opacity:0.5;              /* 老版Safari */
+  opacity: 0.5; 
+</style>
+</head>
+
+<body>
+<div class="container">
+    <div class="descBox" id="descHover" >
+        <ul class="">
+            <li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+			<li>                                  
+				<img  src="http://img1.kanyn.com/files/images/gdb1/album/63577565067164310781908.jpg" />               
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<script src="../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script>
+seajs.config({
+	base: "../sea-modules/",
+    alias: {
+      "jquery": "jquery/jquery/1.10.1/jquery.js"
+    }
+})
+
+seajs.use(["examples/intromove/main-debug"],function (require) {
+  var move = new require('descHover');
+  //var mm = new move('descHover');
+  move.init();
+});
+</script>
+</body>
+</html>

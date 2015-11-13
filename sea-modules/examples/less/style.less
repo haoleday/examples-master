@@ -1,0 +1,77 @@
+// 常用less例子
+
+// 圆角半径
+.border-radius(@radius:5px){	
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	-ms-border-radius:@radius;
+	-o-border-radius:@radius;	
+	border-radius:@radius;
+}
+
+.border-radius-custom(@topLeft:5px,@topRight:5px,@bottomLeft:5px,@bottomRight:5px){	
+	-webkit-border-radius:@topLeft @topRight @bottomLeft @bottomRight;
+	-moz-border-radius:@topLeft @topRight @bottomLeft @bottomRight;
+	-ms-border-radius:@topLeft @topRight @bottomLeft @bottomRight;
+	-o-border-radius:@topLeft @topRight @bottomLeft @bottomRight;
+	border-radius:@topLeft @topRight @bottomLeft @bottomRight;
+}
+
+//方块阴影
+.box-shadow(@x:0px,@y:3px,@blur:5px,@alpha:0.5){	
+	-webkit-box-shadow:@x @y @blur rgba(0, 0, 0, @alpha);	
+	box-shadow:@x @y @blur rgba(0, 0, 0, @alpha);
+} 
+
+//过渡元素
+.transition(@prop:all,@time:1s,@ease:linear){	
+	-webkit-transition:@prop @time @ease;	
+	-o-transition:@prop @time @ease;	
+	transition:@prop @time @ease;
+}
+
+
+//转换/旋转
+.transform(@rotate:90deg,@scale:1,@skew:1deg,@translate:10px;){	
+	transform:transition3D(0,0,0);//3d加速
+	-webkit-transform:rotate(@rotate)  scale(@scale) skew(@skew) translate(@translate);	
+	-ms-transform:rotate(@rotate)  scale(@scale) skew(@skew) translate(@translate);	
+	-o-transform:rotate(@rotate)  scale(@scale) skew(@skew) translate(@translate);	
+	transform:rotate(@rotate)  scale(@scale) skew(@skew) translate(@translate);	
+}
+
+//背景渐变
+.gradient(@origin:left,@start:#fff,@stop:#000){	
+	background-color: @start;	
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);		
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+
+.quick-gradient(@origin:left,@alpha:0.6){	
+	background-image: -webkit-linear-gradient(@origin, rgba(255, 255, 255, 0),rgba(0, 0, 0, @alpha));	
+	background-image: -o-linear-gradient(@origin, rgba(0, 0, 0, 0),rgba(0, 0, 0, @alpha));
+	background-image: linear-gradient(@origin, rgba(0, 0, 0, 0),rgba(0, 0, 0, @alpha));
+}
+
+//镜像效果（倒影）
+.reflect(@length:50%,@opacity:0.5){	;
+	-webkit-box-reflect:below 0 -webkit-linear-gradient(transparent,transparent 40%,rgba(255,255,255,.3));
+	box-reflect:below 0 -webkit-linear-gradient(transparent,transparent 40%,rgba(255,255,255,.3));
+	//box-reflect: below 10px -webkit-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3));
+}
+
+//颜色互补
+@base:#663333;
+@complement1:spin(@base,180);
+@complement2:darken(spin(@base,180), 5%);
+@lighten1:lighten(@base, 15%);
+@lighten2:lighten(@base, 30%);
+
+// 颜色微调
+@sm-lighten1:lighten(spin(@base,5), 10%);
+@sm-lighten2:lighten(spin(@base,10), 20%);
+@sm-darker1:darken(spin(@base,-5), 10%);
+@sm-darker2:darken(spin(@base,-10), 20%);
+
+

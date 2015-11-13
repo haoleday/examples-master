@@ -1,0 +1,19 @@
+html,body,ul,li,img{ list-style-type: none; margin: 0; padding: 0; }
+img{ display: block; }
+#wrap{   position: relative; width:450px; height: 300px;  margin:100px auto; overflow: hidden;}
+#hd{ position: absolute; left: 30%; bottom:0;  z-index: 99; padding: 15px;}
+#hd span{width: 16px; height: 16px; float: left;  background: #fff; border-radius: 8px; margin-right: 10px; cursor: pointer;
+	box-shadow: 0 0 10px #fff;
+}
+#hd span.on{ background: #d41200; }
+#hd span:hover{ background: #d41200; }
+.prev,.next{ display: block; width: 50px; height: 100px; position: absolute; top: 35%; background: #666; z-index: 99; display: none; font-family: "微软雅黑"; font-size: 20px; line-height: 100px; color: #fff; text-align: center; text-decoration: none;}
+.next:hover{background: #333;}
+.prev:hover{background: #333;}
+.prev{ left: 0; }
+.next{ right: 0; }
+
+.bd{  width:450px; height: 300px;  }
+.bd li{width:450px; height: 300px; opacity: 0;  transition:all .5s ease; transform:transition3D(0,0,0); position:absolute; left: 0 ;top: 0;}
+.bd li.active{box-shadow: 0 0 20px #000; opacity: 1; }
+.bd li img{width:450px; height: 300px;border-radius: 3px; }

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body,ul,li,h1,h2,h3,h4,h5{
+			margin: 0;
+			padding: 0;
+
+		}
+		a{
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: none;
+			color: red;
+		}
+		ul,li{
+			list-style: none;
+		}
+		
+		h1{
+			text-align: center;
+		}
+		.wrap{
+			width: 1200px;
+			margin: 0 auto;
+			position: relative;
+
+		}
+		.shopping{
+			width: 200px; 
+			padding: 10px;			
+			background: #ddd;
+			position: fixed;
+			top: 0;
+			right: 0;
+		}
+		.content{
+			width: 500px;			
+			float: left;
+			overflow: hidden;
+			
+		}
+		.content ul{
+			padding-left: 50px;
+		}
+		
+		.content li{
+			padding: 10px 0;
+		}
+
+		.BoxScroll{
+			height: 345px;
+			overflow-y:auto; 
+		}
+		.btn{
+			background: #0cf;
+			padding: 3px 10px;
+			color: #d41200;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+		.btn.on{
+			color: #fff;
+			background: #000;
+		}
+		.name{
+			padding: 0 15px;
+		}
+		.count{
+			line-height: 40px;
+		}
+		.count span{
+			padding: 8px 0;
+		}
+		.add,.minus{
+			padding: 0 5px;
+			font-size: 30px;
+			line-height: 40px;
+			color: #000;
+			margin-left: 15px;
+			background: white;
+			border-radius: 3px;
+		}
+		.padT15B10{
+			padding-top: 15px;
+			padding-bottom: 8px;
+		}
+		.padT30{
+			padding-top: 30px;
+		}
+		.marT30{
+			margin-top: 30px;
+		}
+		.padB20{
+			padding-bottom: 20px;
+		}
+		.col2{
+			color: #e52311;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="padB20">云南旅游超市</h1>
+	<div class="wrap">		
+
+		<div class="content">
+			<h3>景点</h3>
+			<div class="BoxScroll">			
+				<ul>
+					<li data-type="dest" data-id="1"><span class="btn">添加</span><font class="name" >景点1</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="2"><span class="btn">添加</span><font class="name">景点2</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="3"><span class="btn">添加</span><font class="name">景点3</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="4"><span class="btn">添加</span><font class="name">景点4</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="5"><span class="btn">添加</span><font class="name" >景点5</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="6"><span class="btn">添加</span><font class="name">景点6</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="7"><span class="btn">添加</span><font class="name" >景点7</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="8"><span class="btn">添加</span><font class="name" >景点8</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="9"><span class="btn">添加</span><font class="name">景点9</font>门票：<span class="price">113</span>（元/人）</li>
+					<li data-type="dest" data-id="10"><span class="btn">添加</span><font class="name">景点10</font>门票：<span class="price">113</span>（元/人）</li>					
+				</ul>
+			</div>
+		</div>
+		
+		<div class="content">
+			<h3>酒店</h3>
+			<div class="BoxScroll">			
+				<ul>
+					<li data-type="hotel" data-id="1"><span class="btn">添加</span><font class="name">酒店1</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="2"><span class="btn">添加</span><font class="name">酒店2</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="3"><span class="btn">添加</span><font class="name">酒店3</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="4"><span class="btn">添加</span><font class="name">酒店4</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="5"><span class="btn">添加</span><font class="name">酒店5</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="6"><span class="btn">添加</span><font class="name">酒店6</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="7"><span class="btn">添加</span><font class="name">酒店7</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="8"><span class="btn">添加</span><font class="name">酒店8</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="9"><span class="btn">添加</span><font class="name">酒店9</font>酒店：<span class="price">250</span>（元/人）</li>
+					<li data-type="hotel" data-id="10"><span class="btn">添加</span><font class="name">酒店10</font>酒店：<span class="price">250</span>（元/人）</li>
+					
+				</ul>
+			</div>
+		</div>
+
+		<div class="content">
+			<h3>车型</h3>
+			<div class="BoxScroll">			
+				<ul>
+					<li data-type="car" data-id="1"><span class="btn">添加</span><font class="name">车型1</font>费用：<span class="price">5</span>（元/人）</li>
+					<li data-type="car" data-id="2"><span class="btn">添加</span><font class="name">车型2</font>费用：<span class="price">8</span>（元/人）</li>
+					<li data-type="car" data-id="3"><span class="btn">添加</span><font class="name">车型3</font>费用：<span class="price">10</span>（元/人）</li>
+					<li data-type="car" data-id="4"><span class="btn">添加</span><font class="name">车型4</font>费用：<span class="price">15</span>（元/人）</li>
+					<li data-type="car" data-id="5"><span class="btn">添加</span><font class="name">车型5</font>费用：<span class="price">20</span>（元/人）</li>
+					<li data-type="car" data-id="6"><span class="btn">添加</span><font class="name">车型6</font>费用：<span class="price">25</span>（元/人）</li>
+					<li data-type="car" data-id="7"><span class="btn">添加</span><font class="name">车型7</font>费用：<span class="price">30</span>（元/人）</li>
+					<li data-type="car" data-id="8"><span class="btn">添加</span><font class="name">车型8</font>费用：<span class="price">35</span>（元/人）</li>
+					<li data-type="car" data-id="9"><span class="btn">添加</span><font class="name">车型9</font>费用：<span class="price">40</span>（元/人）</li>
+					<li data-type="car" data-id="10"><span class="btn">添加</span><font class="name">车型10</font>费用：<span class="price">45</span>（元/人）</li>
+					
+				</ul>
+			</div>
+		</div>
+
+		<div class="content">
+			<h3>其它</h3>
+			<div class="BoxScroll">			
+				<ul>
+					<li data-type="other" data-id="1"><span class="btn">添加</span><font class="name">其它1</font>餐厅：<span class="price">40</span>（元/人）</li>
+					<li data-type="other" data-id="2"><span class="btn">添加</span><font class="name">其它2</font>餐厅：<span class="price">50</span>（元/人）</li>
+					<li data-type="other" data-id="3"><span class="btn">添加</span><font class="name">其它3</font>餐厅：<span class="price">80</span>（元/人）</li>
+					<li data-type="other" data-id="4"><span class="btn">添加</span><font class="name">其它4</font>餐厅：<span class="price">100</span>（元/人）</li>
+					<li data-type="other" data-id="5"><span class="btn">添加</span><font class="name">其它5</font>餐厅：<span class="price">200</span>（元/人）</li>
+					<li data-type="other" data-id="6"><span class="btn">添加</span><font class="name">其它6</font>餐厅：<span class="price">300</span>（元/人）</li>
+					<li data-type="other" data-id="7"><span class="btn">添加</span><font class="name">其它7</font>餐厅：<span class="price">400</span>（元/人）</li>
+					<li data-type="other" data-id="8"><span class="btn">添加</span><font class="name">其它8</font>餐厅：<span class="price">500</span>（元/人）</li>
+					<li data-type="other" data-id="9"><span class="btn">添加</span><font class="name">其它9</font>餐厅：<span class="price">600</span>（元/人）</li>
+					<li data-type="other" data-id="10"><span class="btn">添加</span><font class="name">其它10</font>餐厅：<span class="price">700</span>（元/人）</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div class="shopping">
+		<h3>购物车</h3>
+		<div class="count"><span >人数：</span><span class="countP">1</span>人<a class="add" onclick="addOrminus(this)" href="javascript:">+</a><a class="minus" onclick="addOrminus(this)" href="javascript:">-</a></div>
+		<div class="spCont" id="spCont">
+			<h5 class="padT15B10">景点<span class="col2">总计：</span><span class="total">0</span>元</h5>
+			<ul class="destSC">
+				<!-- <li><span class="destSP" data-id="">景点1</span><span>门票：</span><span class="priceD">113</span>元/人</li> -->
+			</ul>
+			<h5 class="padT15B10">酒店<span class="col2">总计：</span><span class="total">0</span>元</h5>
+			<ul class="hotelSC">	
+				<!-- <li><span class="hotelSP" data-id="">酒店1</span><span>最低价：</span><span class="priceH">250</span>元/人/天</li>			 -->
+			</ul>
+			<h5 class="padT15B10">车型<span class="col2">总计：</span><span class="total">0</span>元</h5>
+			<ul class="carSC">	
+				<!-- <li><span class="carSP" data-id="">车型1</span><span>车费：</span><span class="priceC">30</span>元/人</li>			 -->
+			</ul>
+			<h5 class="padT15B10">其它<span class="col2">总计：</span><span class="total">0</span>元</h5>
+			<ul class="otherSC">	
+				<!-- <li><span class="otherSP" data-id="">其它1</span><span>餐费：</span><span class="priceO">213</span>元/人</li>			 -->
+			</ul>
+		</div>
+		<div class="marT30">
+		<span><b class="col2">总价：</b></span><span class="total col2">0</span><span>元</span>
+		</div>
+	</div>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/laytpl.js"></script>
+<script id="demo" type="text/html">
+
+</script>
+<script>
+	//dataModel
+	var data = {
+			"userId":"c007",
+			"dest":[
+				{"destId":"dest2"},
+				{"destId":"dest4"},
+				{"destId":"dest5"}
+			],
+			"hotel":[
+				{"hotelId":"hotel2"},
+				{"hotelId":"hotel4"},
+				{"hotelId":"hotel5"}
+			],
+			"car":[
+				{"carId":"car2"},
+				{"carId":"car4"},
+				{"carId":"car5"}
+			],
+			"other":[
+				{"otherId":"other2"},
+				{"otherId":"other4"},
+				{"otherId":"other5"}
+			]
+		}
+
+	var dd ={};
+
+	$(function(){
+		$('.btn').click(function(ele){	
+			var that = $(this);
+			var arr = ['添加','移出'];
+			var stat = that.text() == '添加' ? 1 : 0;			
+			//获取data	
+			var pLi = that.parents('li');	
+			var type = pLi.data('type');			
+			var dataId = pLi.data('id');			
+			var name = pLi.find('.name').text();
+			var price = parseInt(pLi.find('.price').text());
+			var nowData = {
+				"type":type,
+				"id":dataId,
+				"name":name,
+				"price":price
+			}			
+			// dd['rows'] == undefined ? dd['rows'] = [] :null;
+			// dd['rows'].push(nowData);			
+			console.log(nowData);			
+			if(stat){
+				that.addClass('on').text(arr[1]);
+				addShop(nowData);
+			}else{									
+				that.removeClass('on').text(arr[0]);
+				minusShop(nowData);
+			}
+			
+		})
+	})
+
+	//addShop	
+	function addShop(obj){
+		//console.log(obj);
+		var destLi = '<li data-id="'+obj.id+'"><span class="destSP">'+obj.name+'</span><span>门票：</span><span class="price">'+obj.price+'</span>元/人</li>'; 
+		var hotelLi = '<li data-id="'+obj.id+'"><span class="hotelSP" >'+obj.name+'</span><span>最低价：</span><span class="price">'+obj.price+'</span>元/人/天</li>'; 
+		var carLi = '<li data-id="'+obj.id+'"><span class="carSP" >'+obj.name+'</span><span>车费：</span><span class="price">'+obj.price+'</span>元/人</li>'; 
+		var othertLi = '<li data-id="'+obj.id+'"><span class="otherSP" >'+obj.name+'</span><span>餐费：</span><span class="price">'+obj.price+'</span>元/人</li>';
+		switch(obj.type){
+			case 'dest' :	
+				$('.destSC').append(destLi);		
+				break;
+			case 'hotel' :		
+				$('.hotelSC').append(hotelLi);		
+				break;
+			case 'car' :	
+				$('.carSC').append(carLi);				
+				break;
+			case 'other' :
+				$('.otherSC').append(othertLi);	
+				break;					
+		}
+		totalPrice();		
+	}
+
+	//deleteShop
+	function minusShop(obj){
+		var index =0;
+		switch(obj.type){
+			case 'dest' :
+				var cont = $('.destSC');
+				cont.children().each(function(i){					
+					if(parseInt($(this).data('id')) == obj.id){
+						index =i;
+					}
+				})	
+				cont.children().eq(index).remove();				
+				break;
+			case 'hotel' :						
+				var cont = $('.hotelSC');
+				cont.children().each(function(i){					
+					if(parseInt($(this).data('id')) == obj.id){
+						index =i;
+					}
+				})	
+				cont.children().eq(index).remove();		
+				break;
+			case 'car' :					
+				var cont = $('.carSC');
+				cont.children().each(function(i){					
+					if(parseInt($(this).data('id')) == obj.id){
+						index =i;
+					}
+				})	
+				cont.children().eq(index).remove();				
+				break;
+			case 'other' :				
+				var cont = $('.otherSC');
+				cont.children().each(function(i){					
+					if(parseInt($(this).data('id')) == obj.id){
+						index =i;
+					}
+				})	
+				cont.children().eq(index).remove();	
+				break;					
+		}	
+		totalPrice();
+	}
+
+	//AddOrMinus
+	function addOrminus(obj){
+		var onum = $(obj).parent().find('.countP');
+		var num = parseInt(onum.text());
+		//console.log(obj.className);
+		if(obj.className == 'minus' ){
+			num == 1? null : onum.text(num-1);
+		}else onum.text(num+1);		
+		totalPrice();	
+	}
+
+
+	//totalPrice
+	function totalPrice(){
+		// 1、循环计算价格
+		var spCont = $('.shopping');
+		var destPrice = 0;
+		var hotelPrice = 0;
+		var carPrice = 0;
+		var otherPrice = 0;
+		var totalPrice = 0;
+		var countP = parseInt(spCont.find('.countP').text());
+		spCont.find('ul').eq(0).find('.price').each(function(i){
+			destPrice+=parseInt($(this).text());
+		})
+		spCont.find('ul').eq(1).find('.price').each(function(i){
+			hotelPrice+=parseInt($(this).text());
+		})
+		spCont.find('ul').eq(2).find('.price').each(function(i){
+			carPrice+=parseInt($(this).text());
+		})
+		spCont.find('ul').eq(3).find('.price').each(function(i){
+			otherPrice+=parseInt($(this).text());
+		})		
+		spCont.find('.total').eq(0).text(destPrice);
+		spCont.find('.total').eq(1).text(hotelPrice);
+		spCont.find('.total').eq(2).text(carPrice);
+		spCont.find('.total').eq(3).text(otherPrice);
+		spCont.find('.total').eq(4).text((destPrice+hotelPrice+carPrice+otherPrice)*countP);
+
+	}
+
+	function subData(){
+		// 1、ajax提交数据；
+
+	}
+	
+</script>
+</html>

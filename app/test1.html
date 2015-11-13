@@ -1,0 +1,56 @@
+<!DOCTYPE html><html>
+<style>
+body{
+	margin: 0;
+	padding: 0;
+}
+.wrap {
+display: -webkit-box;
+/*-webkit-box-orient: horizontal;*/
+/*-webkit-box-orient: vertical;
+-moz-box-orient: vertical;
+-ms-box-orient: vertical;
+box-orient: vertical;*/
+-webkit-box-orient: horizontal;
+-moz-box-orient: horizontal;
+-ms-box-orient: horizontal;
+box-orient: horizontal;
+}
+.child {
+min-height: 200px;
+border: 2px solid #666;
+-webkit-box-flex: 1;
+margin: 10px;
+font-size: 100px;
+font-weight: bold;
+font-family: Microsoft Yahei;
+-webkit-box-align: center;
+}
+.child2{
+	-webkit-box-flex:6 ;
+	
+}
+.box{
+	/*chrome*/
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	display:-webkit-box;
+	-webkit-box-orient:horizontal;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+</style>
+<body>
+	<div class="wrap">
+		<div class="child">1</div>
+		<div class="child child2">2</div>
+		<div class="child">3</div>
+	</div>
+
+	<div class="box">
+		<img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" alt="">
+	</div>
+</body>
+	
+</html>

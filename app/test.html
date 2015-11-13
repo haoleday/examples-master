@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hello Sea.js</title>
+
+</head>
+<body>
+
+<script>
+/*
+function box(){
+      var arr =[];
+      for (var i = 0; i <5; i++) {      
+        arr[i] = (function(num){
+            return function(){
+            return num;
+          }
+        })(i);
+      }
+      return arr;
+  }
+  var b = box();
+  for (var i = 0; i < 5; i++) {
+    alert(b[i]());
+  }
+
+   var a =1;
+  function dd(){
+    console.log(a);
+    a=2;
+    console.log(a);
+    var a=3;
+    console.log(a);
+  }
+dd();
+
+
+
+ //继承
+  var a = {
+    a:1,
+    b:2
+  }
+
+//中转函数
+function obj(oo){
+  var F = function(){};
+  F.prototype = oo;
+  return new F();
+}
+var b = {};
+b = obj(a);
+console.log(b.a);
+console.log(b.b);
+
+//闭包
+var box =function() {
+  var d  = 1;
+  return function(){
+    return d;
+  }
+}
+ var dd = new box();
+ console.log(dd());
+*/
+
+//原型
+var Box = function(ddd){
+  this.sname = ddd;
+  this.id = 1;
+}
+
+// Box.prototype.init =function(){
+//   return new Box();
+// }
+
+Box.prototype.sayHello = function(){
+  console.log( "你好，我是"+this.sname);
+}
+
+var dd = new Box('xxxx');
+//dd.init();
+dd.sayHello();
+
+</script>
+
+</body>
+</html>

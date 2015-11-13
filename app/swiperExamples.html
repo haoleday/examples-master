@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>swiper</title>
+	<style>
+	html,body{
+		margin: 0;
+		padding: 0;
+	}
+	.swiper-container{
+		margin:0 auto;
+		max-width: 640px;
+	}
+	.swiper-slide{ text-align: center; }
+	.swiper-slide img{ max-width:100%; overflow: hidden; }
+	.tit{
+		width: 80%;
+		height: 100px;		
+		background: rgba(255,255,255,.8);
+		z-index: 1;
+		top: 5%;
+		left: 10%;
+	}
+	.content {
+		width: 80%;
+		height: 60%;
+		z-index: 1;
+		background: rgba(180,250,30,.6);
+		top: 190px;
+		left: 10%;
+	}
+	.ani{
+		position: absolute;
+	}
+	</style>
+	<link rel="stylesheet" href="../sea-modules/swiper/css/swiper.css">
+	<link rel="stylesheet" href="../sea-modules/swiper/css/animate.min.css">	
+	<!-- <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script> -->
+	<script src="../sea-modules/jquery/jquery/1.11.3/jquery-min.js"></script>
+	<script src="../sea-modules/swiper/swiper.js"></script>
+	<script src="../sea-modules/swiper/swiper.animate.min.js"></script>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background: url(imgs/13.jpg) no-repeat;">
+				<div class="ani tit" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0s"  ></div>
+				<div class="ani content" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"  ></div>				
+			</div>
+			<div class="swiper-slide" style="background: url(imgs/14.jpg) no-repeat;">
+				<div class="ani tit" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s"  ></div>
+				<div class="ani content" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"  ></div>	
+			</div>
+			<div class="swiper-slide" style="background: url(imgs/15.jpg) no-repeat;">
+				<div class="ani tit" swiper-animate-effect="flipInX" swiper-animate-duration="0.5s" swiper-animate-delay="0s"  ></div>
+				<div class="ani content" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"  ></div>	
+			</div>			
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		function fixpageHeight() {
+				$(".swiper-container,.swiper-slide").css({"height":$(window).height()});			
+			};
+			
+		$(window).on('resize', function() {
+			fixpageHeight();
+		})
+		fixpageHeight();			
+	
+
+		var swiper =new Swiper(".swiper-container",{
+			direction : 'vertical',
+			pagination: '.swiper-pagination',
+   			mousewheelControl : true,
+   			loop: true,
+   			onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper); //初始化完成开始动画
+			  }, 
+		    onSlideChangeEnd: function(swiper){ 
+		      swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+		    } 
+		})
+	</script>
+</body>
+</html>

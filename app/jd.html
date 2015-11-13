@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jd手机网页</title>
+	<!-- 控制网页显示的宽度，最大显示比例，和是否允许用户手动缩放 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta name="author" content="meeteve">
+	<!-- 是否显示苹果工具栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- 设置苹果头部工具栏的样式 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style>
+	html,body{
+		margin:0;
+		padding: 0;
+		font-size: 62.8%
+		color:#333;
+		font-family: 'Microsoft Yahei';			
+	}
+	body,ul,li,ol,dd,dl,dt{
+		margin: 0;
+		padding: 0;
+	}
+	.jd-header{
+	position: relative;
+	margin:0 10px;
+	height: 40px; 
+	line-height: 40px;
+	}
+	.jd-logo{
+	position: absolute;
+	left: 0; 
+	top: 0;	
+	display:inline-block;
+	}
+	.jd-logo a{
+		display:inline-block;
+		height: 100%;
+		overflow: hidden;		
+	}
+	.box{
+		position: absolute; 
+		left: 0;
+		top: 0;
+		width: 80%;
+	height: 60%;
+	margin-bottom: 100px;
+	background: #ccc;
+	-webkit-box-reflect: below 1px -webkit-gradient(linear,0 20%,0 100%,from(transparent),color-stop(0, transparent),to(#000));
+}
+	}
+	</style>
+</head>
+<body>
+	<header class="jd-header">
+		<div class="jd-logo">
+			<i></i>
+		</div>
+		<form action="" class="jd-search"></form>
+		<div class="jd-login">
+			<a href="#"></a>
+		</div>
+	</header>
+	<section>
+		<div class="box"></div>
+	</section>
+
+	<script>
+	function load(){
+		var box = document.querySelector('.box');
+		function touch(evt) {
+			var e = evt || event;
+			console.log(e);
+			switch(e.type){
+				case 'touchstart' : 
+					box.innerHTML = "start"+e.touches[0].clientX +','+e.touches[0].clientY;
+					break;
+				case 'touchend': 
+					box.innerHTML = "end"+e.changedTouches[0].clientX +','+e.changedTouches[0].clientY;;
+					break;
+				case 'touchmove' :
+					e.preventDefault();
+					box.innerHTML = "move"+e.touches[0].clientX +','+e.touches[0].clientY;;					
+					break;
+			}
+			
+			// box.style.background = '#d41200';
+		}
+
+		
+		box.addEventListener('touchstart',touch,false);
+		box.addEventListener('touchmove',touch,false);
+		box.addEventListener('touchend',touch,false);
+	}
+
+	window.addEventListener('load',load,false);	
+
+
+// 	function load (){
+ 
+//     document.addEventListener('touchstart',touch, false);
+//     document.addEventListener('touchmove',touch, false);
+//     document.addEventListener('touchend',touch, false);
+     
+//     function touch (event){
+//         var event = event || window.event;
+         
+//         var oInp =  document.querySelector('.box');
+ 
+//         switch(event.type){
+//             case "touchstart":
+//                 oInp.innerHTML = "Touch started (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")";
+//                 break;
+//             case "touchend":
+//                 oInp.innerHTML = "<br>Touch end (" + event.changedTouches[0].clientX + "," + event.changedTouches[0].clientY + ")";
+//                 break;
+//             case "touchmove":
+//                 event.preventDefault();
+//                 oInp.innerHTML = "<br>Touch moved (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")";
+//                 break;
+//         }
+         
+//     }
+// }
+// window.addEventListener('load',load, false);
+	</script>
+</body>
+</html>

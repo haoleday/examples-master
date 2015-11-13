@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3</title>
+	<style>
+	*{margin:0;pading:0;}
+	@media screen and (max-width: 600px) {figure{width:100%;}}
+	@media screen and (max-width: 1199px) and (min-width: 601px){figure{width: 50%;}}
+	@media screen and (min-width: 1200px){figure{width: 25%;}}
+
+	figure{height: 300px; overflow: hidden; float: left;position: relative; }
+	figure figcaption{ position: absolute; top: 0; left: 0; padding: 20px; color: #fff; font-family: "微软雅黑"; font-size: 14px;}		
+	figure figcaption{transition: all 0.35s;}
+	figure figcaption p{transition: all 0.35s;}
+	figure img{width: 120%; transition: all 0.35s;}
+	.test1{ background: #44A5F0; }
+	.test1 img{ opacity:.8;transform:translate(0,0);}
+	.test1 figcaption h2{ margin-bottom: 5px; }
+	.test1 figcaption p{ margin: 3px; padding: 1px; background: #fff; color: #333;transform: translate(-120px,0px);  opacity: 0; }	
+	.test1:hover  img{opacity:.5;transform: translate(-50px,0);}
+	.test1:hover figcaption p{transform: translate(0px,0px); opacity: 1;}
+	.test1 figcaption p:nth-of-type(1){transition-delay: 0.05s;}
+	.test1 figcaption p:nth-of-type(2){transition-delay: 0.1s;}
+	.test1 figcaption p:nth-of-type(3){transition-delay: 0.15s;}
+
+	.test2{background: #3065B4;}
+	.test2 img{ opacity:.8;transform:translate(0,0);}
+	.test2 figcaption h2{ margin-bottom: 5px; }
+	.test2 figcaption p{ margin: 3px;   transform: translate(30px,30px); opacity: 0;  }
+	.test2 figure{ width: 100%; height: 100%;}
+	.test2 div{ position: absolute; left: 10%; top: -100%;  width: 80%; height: 80%; border: 1px solid #fff; transition: all .35s; transform: rotate(0deg);}
+	.test2 figcaption{ transform: translate(0,0); }
+	.test2:hover img{ opacity:.5;}
+	.test2:hover figcaption{ transform: translate(20%,20%); }
+	.test2:hover figcaption p{transform: translate(0,0); opacity: 1;}
+	.test2:hover div{ position: absolute; left: 10%; top: 10%;  width: 80%; height: 80%; border: 1px solid #fff; transform: rotate(360deg);}
+	.test3{background: #000;}
+	.test3 img{ opacity:.8;transform:translate(0,0);}
+	.test3 figcaption h2{ margin-bottom: 5px;  transform: skew(90deg); transition: all .35s; }
+	.test3 figcaption p{ margin: 3px; padding: 1px;  transform: translate(0,10px) skew(-90deg);  }
+	.test3:hover img{ opacity:.5; }
+	.test3:hover figcaption h2{ margin-bottom: 5px;  transform: skew(0deg); }
+	.test3:hover figcaption p{ margin: 3px; padding: 1px;  transform: translate(0,0) skew(0deg) ; transition-delay:.1s;  }
+	.test4{ background: #000; }
+	.test4 img{transform: translate(-50px,0);}
+	.test4 figcaption h2{transform: translate(-30px,0);}
+	.test4 figcaption p{transform: translate(-30px,0); opacity: 0;}
+	.test4 div{ position: absolute; top: 100%; left: 0; width: 130%; height: 100%; background:rgba(255,255,255,.9); transform: rotate(-15deg); transform-origin:0 0;  }
+	.test4 .btn1,.test4 .btn2{ position: absolute; right: 0; bottom: 8%; color: #3065B4; font-family: "微软雅黑"; font-size: 20px; transition: all .35s; opacity: 0;}
+	
+	.test4 img{}
+	.test4 figcaption h2{transform: translate(0,30px); transition: all .35s;}
+	.test4 figcaption p{transform: translate(0,30px); opacity: 0;}
+	.test4 div{ position: absolute; top: 100%; left: 0; width: 130%; height: 100%; background:rgba(255,255,255,.9); transform: rotate(0deg); transform-origin:0 0;  transition: all .35s;}
+	.test4:hover img{opacity: 0.5;}
+	.test4:hover figcaption h2{transform: translate(0,0);}
+	.test4:hover figcaption p{transform: translate(0,0); opacity: 1;}
+	.test4:hover div{ background:rgba(255,255,255,.9); transform: rotate(-15deg); }
+	.test4:hover .btn1{ right: 25%; opacity: 1;}
+	.test4:hover .btn2{right: 5%; opacity: 1;}
+	</style>
+</head>
+<body>	
+	
+	<section class="wrap">
+		<figure class="test1">
+			<img src="http://img1.kanyn.com/files/images/gdb1/album/63575674571179336770337.jpg" alt="">
+			<figcaption>
+				<h2>延迟显示</h2>
+				<p>图片一说明</p>
+				<p>图片一说明</p>
+				<p>图片一说明</p>
+			</figcaption>
+		</figure>
+		<figure class="test2">
+			<img src="http://img1.kanyn.com/files/images/gdb1/album/63575674571179336770337.jpg" alt="">
+			<figcaption>
+				<h2>旋转飞入飞出</h2>
+				<p>通过旋转和位移，制作飞入飞出效果</p>				
+			</figcaption>
+			<div></div>
+		</figure>
+		<figure class="test3">
+			<img src="http://img1.kanyn.com/files/images/gdb1/album/63575674571179336770337.jpg" alt="">
+			<figcaption>
+				<h2>文字倾斜扭曲</h2>
+				<p>文字倾斜显示</p>				
+			</figcaption>
+		</figure>
+		<figure class="test4">
+			<img src="http://img1.kanyn.com/files/images/gdb1/album/63575674571179336770337.jpg" alt="">
+			<figcaption>
+				<h2>升起的图片说明</h2>
+				<p>旋转加位移实现</p>				
+			</figcaption>
+			<div></div>
+			<a href="javascript:" class="btn1">btn1</a>
+			<a href="javascript:" class="btn2">btn2</a>
+		</figure>
+	</section>
+
+</body>
+</html>

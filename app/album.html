@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片新闻</title>
+<style type="text/css">
+	
+</style>
+<link href="../sea-modules/examples/album/Album-debug.css" rel="stylesheet" type="text/css">
+<script src="../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+</head>
+
+<body>
+
+<div class="albumMain">	
+	<div class="title">
+        
+    	<h1>NASA公布火星高清照 揭秘科幻片场景真实地形</h1>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="bd">
+    	<a href="javascript:" class="prev"><div class="icon"></div></a>        
+        <ul class="">
+            <li><img src="../static/album/images//2.jpg" title="图片一描述"></li>
+            <li><img src="../static/album/images//1.jpg" title="图片2描述"></li>
+            <li><img src="../static/album/images//2.jpg" title="图片3描述"></li>
+            <li><img src="../static/album/images//1.jpg" title="图片4描述"></li>
+            <li><img src="../static/album/images//2.jpg" title="图片5描述"></li>
+            <li><img src="../static/album/images//1.jpg" title="图片6描述"></li>
+            <li><img src="../static/album/images//2.jpg" title="图片7描述"></li>
+            <li><img src="../static/album/images//1.jpg" title="图片8描述"></li>
+			<li><img src="../static/album/images//3.jpg" title="图片9描述"></li>
+			<li><img src="../static/album/images//loading.gif" title="图片10描述"></li>
+			<li><img src="http://img1.kanyn.com/files/images/gdb1/common/63579046829785378253589.jpg" title="图片10描述"></li>			
+        </ul>
+        <a href="javascript:" class="next"><div class="icon"></div></a>        
+        <div class="desc"> 
+        	<div class="pageState"></div>
+			<div class="intro"></div>
+            <div class="time_source"></div>
+        </div>       
+    </div>
+    <div class="hd">
+    	<a href="javascript:" class="hPrev"></a>
+	    <ul></ul>
+        <a href="javascript:" class="hNext"></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+<script>
+seajs.config({
+	base: "../sea-modules/",
+    alias: {
+      "jquery": "jquery/jquery/1.10.1/jquery.js",
+	  'muosewheel':'examples/album/mousewheel.js'
+    }
+})
+
+seajs.use(['jquery', 'examples/album/main-debug','muosewheel'], function(jQuery) {  
+  jQuery(".albumMain").Album();  
+});
+</script>
+

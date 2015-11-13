@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../sea-modules/examples/index/index.css">
+</head>
+<body>
+	<h2 id="works-box" style="padding: 50px 0;">简单导航效果</h2>
+<nav id="nav">
+  <ul>
+    <li><a class="on" href="#">导航</a></li>
+    <li><a href="#">导航2</a></li>
+    <li><a href="#">导航3</a></li>
+    <li><a href="#">导航4</a></li>
+    <li><a href="#">导航5</a></li>
+    <li id="tip" class="tip"></li>
+    <div class="clear"></div>
+  </ul>
+</nav>
+<script>
+window.onload = function(){
+  //导航
+  var oNav = document.getElementById('nav');
+  var aLi = oNav.getElementsByTagName('li');
+  var oTip = document.getElementById('tip'); 
+  for(var i=0;i<aLi.length-1;i++){
+      aLi[i].onmouseover = function(){        
+        move(oTip,this.offsetLeft);
+      }
+    }
+    var speed = 0;
+    var left = 0;
+    function move(obj,nTarget){
+      clearInterval(obj.time);
+      obj.time = setInterval(function(){
+        speed+=(nTarget - left)/5;
+        speed*=.7;
+        left+=speed;
+        obj.style.left = Math.round(left)+'px';        
+        if(nTarget == Math.round(left) && Math.abs(speed)<1 ){
+          clearInterval(obj.time);
+        }
+      },30);
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.clock-wrap{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	.clock-border{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -150px;
+		margin-top: -150px;
+		/*border: 10px #aaa solid;*/
+		border-width: 18px;
+		border-color: transparent #d2d8df #d2d8df ;
+		border-style: solid;
+		background-clip: padding-box;
+		border-radius: 50%;
+		-webkit-animation: rotate-clock-border 30s linear infinite;		
+
+	}
+	@keyframes rotate-clock-border
+	{ 
+		0%{-webkit-transform: rotate( 45deg);-moz-transform: rotate( 45deg);-ms-transform: rotate( 45deg);transform: rotate( 45deg); } 
+		100%{-webkit-transform: rotate( 315deg);-moz-transform: rotate( 315deg);-ms-transform: rotate( 315deg);transform: rotate( 315deg); };
+	}
+	@-webkit-keyframes rotate-clock-border
+		{ 
+			0%{-webkit-transform: rotate( 0deg);} 
+			100%{-webkit-transform: rotate( 360deg); };
+	}	
+
+	.seconds{
+	
+	}
+	</style>
+</head>
+<body>
+	<div class="clock-wrap">
+		<div class="clock-border">
+			<div class="clock">
+				<div class="hour"></div>
+				<div class="minute"></div>
+				<div class="seconds">
+					<div class="hand"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+<script>
+	var a=1,b=12;
+	function aa(){
+		console.log('a:'+a);
+		//a=2;
+		var a =3;		
+		console.log('a:'+a);
+		console.log('b:'+b);
+		 b=0;
+		console.log('a+b:'+a+b);
+	}
+	aa();
+</script>
+</body>
+</html>

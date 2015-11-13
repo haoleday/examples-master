@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3d焦点图</title>
+<link rel="stylesheet" type="text/css" href="../sea-modules/examples/index/index.css">
+<script type="text/javascript" src="../sea-modules/seajs/seajs/2.2.0/sea-debug.js"></script>
+</head>
+
+
+<body>
+
+
+
+<h2 id="works-box" >3D焦点图效果</h2>
+<section id="slider" class="slider">
+  <a href="javascript:void(0);" class="prev" id="prev"></a>  
+    <ul class="bd" id="bd">
+      <li  style="background: url(http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg)"></li>
+      <li class="l2" style="background: url(http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg)"></li>
+      <li class="l1" style="background: url(http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg)"></li>
+      <li class="cur" style="background: url(http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg)"></li>
+      <li class="r1" style="background: url(http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg)"></li>
+      <li class="r2" style="background: url(http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg)"></li>
+      <li  style="background: url(http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg)"></li>    
+    </ul>  
+  <a href="javascript:void(0);" class="next" id="next"></a>
+</section>
+
+
+<script>
+window.onload = function(){
+
+
+    //slider
+    var slider = document.getElementById('slider');
+    var aLi = slider.getElementsByTagName('li');
+    var oPrev = document.getElementById('prev');
+    var oNext = document.getElementById('next');
+    var arr =[];
+    for(var i = 0; i<aLi.length;i++){
+      arr[i] = aLi[i].className;
+      (function(index){
+          aLi[index].onclick = function(){
+            window.open('http://www.kanyn.com');
+          }
+      })(i);
+    }
+
+    function tab(){
+      for(var i=0; i<aLi.length;i++){
+        aLi[i].className = arr[i];
+      }
+    }
+
+    oPrev.onclick = function(){      
+      arr.unshift(arr.pop()); 
+      tab();   
+    }
+    oNext.onclick = function(){
+      arr.push(arr.shift());   
+      tab();   
+    }    
+
+}
+
+// seajs.config({
+//   base: "../sea-modules/",    
+// });
+
+// seajs.use([ "examples/intromove/main-debug" ], function(IntroMove) {
+//     var s = new IntroMove("Effect");   
+//     s.init();
+// });
+
+
+</script>
+
+</body>
+</html>

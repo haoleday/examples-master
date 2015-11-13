@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3dcss</title>
+<style type="text/css">
+  html,body{ margin:0 auto; }
+  .div{text-align: center; padding-top: 50px}
+  #btn{  width: 100px; height: 50px; line-height: 50px; text-align: center; font-family: '微软雅黑'; font-size: 20px; }
+  .c3d{
+    /*开启gpu加速*/
+    transform:translate3d(0,0,0);  
+    width: 300px; 
+    height: 300px; 
+    margin:200px auto; 
+    position: relative; 
+    list-style-type: none; 
+    display: block;  
+    perspective:3000px; 
+    transform-style: preserve-3d; 
+    transform: rotateX(-10deg);    
+  }
+  .c3d li{
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 250px; 
+    height: 350px; 
+    list-style-type: none;
+    -webkit-box-reflect: below 10px -webkit-linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.3)); 
+    transition: 2s all ease; 
+
+    overflow: hidden;}
+  .c3d li img{ opacity: 1; }
+  .li1{transform: rotateY(40deg)  translateZ(-500px); background:#111; }
+  .li2{transform: rotateY(80deg)  translateZ(-500px); background:#999;}
+  .li3{transform: rotateY(120deg)  translateZ(-500px); background:#ccc;}
+  .li4{transform: rotateY(160deg)  translateZ(-500px);background:#0cf; }
+  .li5{transform: rotateY(200deg)  translateZ(-500px); background:#c0f;}
+  .li6{transform: rotateY(240deg)  translateZ(-500px); background:#d41200;}
+  .li7{transform: rotateY(280deg)  translateZ(-500px); background:#d41200;}
+  .li8{transform: rotateY(320deg)  translateZ(-500px); background:#d41200;}
+  .li9{transform: rotateY(360deg)  translateZ(-500px); background:#d41200;}
+</style>
+</head>
+<body>
+<div class="div">
+  <button id="btn">展开</button>  
+</div>
+<ul id="c3d" class="c3d">
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>
+  <li><img src="http://img1.kanyn.com/files/images/gdb1/common/63578192998503969048555.jpg" ></li>  
+</ul>
+
+
+<script>  
+  window.onload = function(){   
+    var oBtn = document.getElementById('btn');
+    //var oBtn2 = document.getElementById('btn2');
+    var oUl = document.getElementById('c3d');
+    var aLi = oUl.children;
+    var unclick = false;
+    oBtn.onclick = function(){  
+      if(!unclick){
+        unclick = true;
+        oBtn.innerHTML = '折叠';
+        for(var i=0;i<aLi.length;i++){              
+          aLi[i].className = 'li'+(i+1);
+        }
+      }else{
+        unclick = false;
+        oBtn.innerHTML = '展开';
+        for(var i=0;i<aLi.length;i++){              
+          aLi[i].className = '';
+        }
+       }
+    }    
+    
+}
+</script>
+</body>
+</html>

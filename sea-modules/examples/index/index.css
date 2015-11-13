@@ -1,0 +1,61 @@
+html,body,ul,li,h1,h2,h3{ margin: 0; padding: 0; }
+  ul,li{list-style: none;}  
+  .clear{ clear:both; }
+  #nav{width: 1000px; margin:0 auto; position:relative;}
+  #nav li{ position: relative; float: left; margin-right: 40px; transform: skew(-20deg); box-shadow: 10px 6px 8px 0px #ccc;
+  text-shadow: 3px 3px 0px #ccc; font-family: "微软雅黑"; z-index: 2; }
+  #nav li a{ width: 150px; height: 50px; line-height: 50px; display: block;  text-align: center;    text-decoration: none; color: #333; font-size: 22px; }
+  #nav li a.on{ color: #d41200; }
+  #nav  .tip{ position: absolute; left: 0; top: 0; width: 150px; height: 50px; background: rgba(0,0,0,.3); box-shadow:none; z-index: 1;}
+
+  /*slider*/
+  .slider{  position: relative; width: 1000px; height: 450px; position: relative; margin:0 auto;}
+  
+  .slider .bd{width: 500px; height: 300px; perspective:800px; position: absolute; top: 50%; left: 50%; margin-left: -250px; margin-top: -150px;  }
+  .slider .bd li{ position: absolute; float: left; width: 500px; height: 300px;  -webkit-box-reflect: below 10px -webkit-linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.3)); transition:1s all ease; opacity: 0; border: 1px solid #333;}  
+  .slider li:hover{
+  box-shadow: 5px 5px 4px 0 #ccc;border: 1px solid #f7f5f5;
+  }
+  .slider  li.l2{
+    opacity: 0;transform:translateX(-240px) rotateY(60deg);z-index:2
+  }
+  .slider li.l1{
+    opacity: 0.6;transform:translateX(-180px) rotateY(60deg);z-index:5
+  }
+  .slider  li.cur{
+    opacity: 1;z-index:10
+  }
+  .slider li.r1{
+    opacity: 0.6;transform:translateX(180px) rotateY(-60deg);z-index:5
+  }
+  .slider li.r2{
+    opacity: 0;transform:translateX(240px) rotateY(-60deg);z-index:2
+  }
+  .slider .prev, .next{ width: 100px; height: 100px; position: absolute; top: 50%; margin-top: -50px; background: rgba(0,0,0,.5); background: url(img/lr.png) no-repeat; }
+  .slider .prev { left: -100px; background-position: 30px  center;}
+  .slider .next { right: -100px; background-position: -50px  center;}
+
+  /*img*/
+  .img{ width: 1000px; margin: 0 auto; padding-top: 40px; margin-top: 20px; text-align: center; }
+  .img img{ display: block; }
+  #works-box{font-weight: bold;     
+  text-align: center;
+  font-size: 42px;
+  padding-top: 40px;
+  text-shadow: 3px 1px 0 #ccc;
+  color: #000;}
+  #works-box2{font-weight: bold;    
+  text-align: center;
+  margin-top: 120px;
+  font-size: 42px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  text-shadow: 3px 1px 0 #ccc;
+  color: #000;}
+
+  /*jseffect*/
+  #Effect{ width: 1000px; margin:0 auto; }
+  #Effect li{ width: 200px; height: 200px; position: relative; margin-right: 15px; margin-bottom: 15px; overflow: hidden; float: left; }
+  #Effect .box{ padding-left: 85px; display: block; }
+  #Effect li.nomar{ margin-right: 0; }
+  #Effect li .tip{ width: 200px; height: 200px; position: absolute; left: -200px; top: 0; background: rgba(0,0,0,.4); }

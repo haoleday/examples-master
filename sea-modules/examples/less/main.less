@@ -1,0 +1,98 @@
+@import url(style.less);
+
+
+.box{
+	width: 100px;	
+	height: 100px;
+	background: red;
+	.border-radius(50px)		
+}
+
+.box2{
+	width: 100px;	
+	height: 100px;
+	background: red;
+	.border-radius-custom(10px,20px,30px,40px);
+
+}
+.box3{
+	width: 100px;	
+	height: 100px;
+	background: red;
+	.border-radius-custom(10px,20px,30px,40px);
+	.box-shadow(3px,5px,10px,0.8);
+}
+.box4{
+	width: 100px;	
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	background: red;
+	cursor: pointer;
+	.border-radius(50px);
+	.box-shadow(0,0,10px,0.8);
+	.transition(all,0.35s,linear);
+	&:hover{
+		.transform(360deg,1,0,0);
+		// transform:translateX(100px);
+	}
+}
+
+.box5{
+	width: 200px;	
+	height: 200px; 
+	margin-bottom: 200px;
+	//overflow:hidden;
+	.gradient();	
+}
+.box6{
+	width: 200px;	
+	height: 200px; 
+	margin-bottom: 200px;
+	//overflow:hidden;
+	.quick-gradient();
+}
+.box7{
+	width: 200px;	
+	height: 200px; 
+	margin-bottom: 200px;
+	.reflect();
+	img{
+		width: 200px;	
+		height: 200px; 
+	}		
+}
+
+.bb{
+
+}
+
+.clear{
+	clear: both;
+}
+
+.cc{
+	width: 100px; 
+	height: 250px; 
+	float: left;
+}
+.c1{ background: @complement1}
+.c2{ background: @complement2}
+.c3{ background: @lighten1}
+.c4{ background: @lighten2}
+
+.s1{background: @sm-lighten1}
+.s2{background: @sm-lighten2}
+.s3{background: @sm-darker1}
+.s4{background: @sm-darker2}
+
+@sm-lighten1:lighten(spin(@base,5), 10%);
+@sm-lighten2:lighten(spin(@base,10), 20%);
+@sm-darker1:darken(spin(@base,-5), 10%);
+@sm-darker2:darken(spin(@base,-10), 20%);
+
+
+@base1:#111;
+.d1{background: lighten(@base1,60%)}
+.d2{background: spin(@base1,60%)}
+.d3{background: darken(@base1,60%)}

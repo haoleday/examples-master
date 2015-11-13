@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			background: red;
+			margin-bottom: 5px;			
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+</body>
+<script>
+	// var box = {
+	// 	a:1,
+	// 	getconent:function () {
+	// 		// body...
+	// 		return this.a;
+	// 	}
+	// };
+	// console.log('box.getconent:'+box.getconent());
+	// var test = box;
+	// console.log('test:'+test());
+
+
+	// //点击时显示每个li的index
+	// var oBox = document.getElementById('box');
+	// var aLi = oBox.getElementsByTagName('li');
+	// //console.log(aLi.length);
+	// for (var i = 0; i < aLi.length; i++) {
+	// 	(function(index){
+	// 		aLi[i].onclick = function(){
+	// 			alert(index);
+	// 		}
+	// 	})(i);		
+	// }
+	// console.log(i);
+
+
+	//输出时间
+	var date = new Date();
+	console.log(date);
+	var year = date.getFullYear();
+	console.log(year);
+	var month = date.getMonth() + 1;
+	console.log(month);
+	var days = date.getDate();
+	console.log(days);
+
+	var hours = date.getHours();
+	console.log(hours);
+	var minutes = date.getMinutes();
+	console.log(minutes);
+
+	var second = date.getSeconds();
+	console.log(second);
+	
+	var week = date.getDay();
+	console.log(week);
+
+	var localDate = date.toLocaleDateString(); 
+	console.log(localDate);
+
+	var ss = date.toLocaleTimeString();
+	console.log(ss);
+	
+
+	console.log(console.__proto__);
+
+	// var Loog=function(e){
+	// 	var e =e || event;
+	// 	console.log.apply(this,arguments);
+	// }
+	// // var d = new Loog();
+	// // d.
+	// Loog(window);
+
+	var hello = "hello";
+</script>
+</html>

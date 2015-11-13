@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>box-sizing_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
+<meta name="copyright" content="www.doyoe.com" />
+<style>
+.test{width:200px;height:70px;padding:10px;border:15px solid #999;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box;background:#eee;}
+.test2{width:200px;height:70px;padding:10px;border:15px solid #999;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;background:#eee;margin-top:20px;}
+.box{
+	
+	/*//倒影效果 reflect*/
+	/*-webkit-box-reflect: below 1px -webkit-linear-gradient(0 20%, 0 100%,from(transparent),color-stop(0,transparent),to(#000));*/
+	/*-webkit-box-reflect:below 1px -webkit-linear-gradient(0% 100%,100% 100%,from(#000),to(white));*/
+	/*-webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 100%,100% 100%, from(rgba(255,255,255,0)), to(white));*/
+	/*-webkit-box-reflect: below 1px -webkit-gradient(linear,0 20%,0 100%,from(transparent),color-stop(0, transparent),to(#000));*/
+	/*-webkit-box-reflect:below 0 -webkit-linear-gradient(transparent,transparent 20%,rgba(255,255,255,.3));*/
+	-webkit-box-reflect: below 1px -webkit-gradient(linear,0 20%,0 100%,from(transparent),color-stop(0, transparent),to(#000));
+}
+.box1{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 100px;
+	background: #ccc;
+	-webkit-box-reflect: below 1px -webkit-gradient(linear,0 20%,0 100%,from(transparent),color-stop(0, transparent),to(#000));
+}
+</style>
+</head>
+<body>
+<div class="test">content-box</div>
+<div class="test2">border-box</div>
+<div class="box1"></div>
+<h2 class="box">adsasdfasdfasfd</h2>
+
+</body>
+</html>
+			

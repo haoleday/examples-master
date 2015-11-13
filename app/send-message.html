@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sendMessage</title>
+	<style>
+	.wrap{ 
+		width: 100%; 
+		margin:200px auto;
+		text-align: center;		
+	}
+	#btn{
+		width: 250px;
+		height: 50px; 
+		line-height: 40px;		
+		font-size: 25px;
+		font-family: '微软雅黑';		
+	}	 
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<button id="btn">发送信息</button> 				
+	</div>
+	<script>
+		window.onload = function(){
+			oBtn = document.getElementById('btn');
+			var n = 11;
+			var time = null;			
+			oBtn.onclick = function(){
+				clearInterval(time);						
+				time = setInterval(function(){
+					oBtn.disabled = true;
+					n--;
+					oBtn.innerHTML = '正在发送（'+n+'）';								
+					time = setInterval(function(){
+						if(n<0) {							
+							oBtn.innerHTML = '重新发送！';
+							oBtn.disabled = false;							
+							clearInterval(time);
+							oBtn.onclick=function(){
+								n=11;
+							}							
+						}	
+					},1000)
+				},1000)
+				
+				
+			}
+		}
+	</script>
+</body>
+</html>
